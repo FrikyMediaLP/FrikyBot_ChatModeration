@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Chat Moderation - FrikyBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GENERAL CSS -->
+    <link href="../../styles/standard.css" rel="stylesheet">
+    <link href="../../styles/Grid/Grid_Foundation.css" rel="stylesheet">
+
+    <!-- PAGE CSS-->
+    <link href="../../styles/Grid/Grid_Default.css" rel="stylesheet">
+    <link href="ChatModeration/style.css" rel="stylesheet">
+
+    <!-- GENERAL JS-->
+    <script src="../../scripts/standard.js"></script>
+    <script src="ChatModeration/scripts.js"></script>
+
+    <!-- MISC -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <script src="../misc/NavigationV2/NavigationV2.js"></script>
+    <link href="../misc/NavigationV2/NavigationV2.css" rel="stylesheet">
+
+    <script src="../misc/OUTPUT/OUTPUT.js"></script>
+    <link href="../misc/OUTPUT/OUTPUT.css" rel="stylesheet">
+
+    <script src="../misc/BOT_STATUS/BOT_STATUS.js"></script>
+    <link href="../misc/BOT_STATUS/BOT_STATUS.css" rel="stylesheet">
+
+    <script src="../misc/Login/Login.js"></script>
+    <link href="../misc/Login/Login.css" rel="stylesheet">
+
+    <script src="../misc/SwitchButton/SwitchButton.js"></script>
+    <link href="../misc/SwitchButton/SwitchButton.css" rel="stylesheet">
+</head>
+<body onload="Standard_Page_Init(); init();">
+    <!-- MAIN GRID -->
+    <div id="grid">
+        <!-- NAVI HEADER -->
+        <div class="cellM" id="naviHeader">
+            <a href="../../">FRIKY<span>BOT</span></a>
+        </div>
+
+        <!-- CONTENT HEADER -->
+        <div class="cellM" id="contentHeader">
+
+        </div>
+
+        <!-- NAVI -->
+        <div class="cellM" id="navi">
+            <div id="BOT_STATUS_DETAILS_MINI">
+
+            </div>
+            <div id="mainNavi">
+
+            </div>
+            <button id="LightModeButton" onclick="toggleLightMode(); redraw_canvas();">DarkMode</button>
+            <div id="license"> - <a href="https://fontawesome.com/license" target="_blank">Icon license</a> - </div>
+        </div>
+
+        <!-- ACTUAL CONTENT -->
+        <div class="cellM" id="content" style="background-color: #f5f5f5;">
+            <output></output>
+
+            <div id="CHATMOD">
+                <center>CHAT MODERATION</center>
+
+                <div id="V2_FILTER_UI">
+
+                </div>
+
+                <output id="AUTOMOD_OUTPUT"></output>
+                <center>Twitch Automod Status</center>
+                <div id="AutoMod">
+
+                </div>
+
+                <output id="BANS_OUTPUT"></output>
+                <center>Twitch Banned Users</center>
+                <div id="BannedList">
+
+                </div>
+
+                <output id="HISTORY_OUTPUT"></output>
+                <center>FrikyBot User History</center>
+                <div id="UserHistory">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
